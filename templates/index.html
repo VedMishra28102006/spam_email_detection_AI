@@ -1,0 +1,10 @@
+{% if context["prediction"] %}
+<h3>Prediction: {{ context["prediction"] }}</h1>
+{% endif %}
+<form method="POST">
+  <label>Email:</label>
+  <br>
+  <textarea name="email" rows="25" cols="50"></textarea>
+  <br>
+  <button type="submit">Submit</button>
+</form>
