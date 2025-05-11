@@ -4,7 +4,7 @@ A spam email detection app which takes a feature as user input and predicts the 
 
 2) How to run
 
-Install the required packages, then run python3 main.py inside the root folder and open the http://localhost:5000/ url.
+Install the required packages, then run python3 main.py inside the project's root folder and open the http://localhost:5000/ url.
 
 3) Dependencies
 
@@ -16,3 +16,4 @@ The spam_ham_dataset.csv dataset for training used in this project is taken from
 
 https://www.kaggle.com/datasets/venky73/spam-mails-dataset
 
+Download and place it inside the project's root folder.
