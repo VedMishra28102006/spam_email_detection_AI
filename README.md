@@ -4,7 +4,7 @@ A spam email detection app which takes a feature as user input and predicts the 
 
 2) How to run
 
-Install the spam_han_dataset.csv dataset and place it inside the root folder, install the required libraries, then run python3 main.py inside the root folder and open the
+Install the spam_ham_dataset.csv dataset and place it inside the root folder, install the required libraries, then run python3 main.py inside the root folder and open the
 
 3) Dependencies
 
