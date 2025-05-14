@@ -15,5 +15,3 @@ Packages required to be installed for this project: flask, pandas, sklearn
 The spam_ham_dataset.csv dataset for training used in this project is taken from kaggle whose link is given below:
 
 https://www.kaggle.com/datasets/venky73/spam-mails-dataset
-
-Download and place it inside the project's root folder.
