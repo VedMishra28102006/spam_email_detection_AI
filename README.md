@@ -4,11 +4,19 @@ A spam email detection app which takes a feature as user input and predicts the 
 
 2) How to run
 
-Install the required packages, then run python3 main.py inside the project's root folder and open the http://localhost:5000/ url.
+Install the required packages using
+
+pip install -r requirements.txt
+
+then run
+
+python3 main.py
+
+inside the project's root folder and open the http://localhost:5000/ url.
 
 3) Dependencies
 
-Packages required to be installed for this project: flask, pandas, sklearn
+Packages required to be installed for this project: Flask, pandas, scikit-learn
 
 4) Dataset
 
