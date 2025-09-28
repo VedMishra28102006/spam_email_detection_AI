@@ -4,6 +4,13 @@ import pandas as pd
 from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+df = pd.read_csv("spam_ham_dataset.csv")
+vectorizer = TfidfVectorizer(stop_words="english")
+X = vectorizer.fit_transform(df["text"])
+y = df["label_num"]
+clf = SVC(kernel="linear")
+clf.fit(X, y)
+
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
@@ -12,12 +19,6 @@ def index():
   if request.method == "POST":
     email = request.form["email"]
     types = ["ham", "spam"]
-    df = pd.read_csv("spam_ham_dataset.csv")
-    vectorizer = TfidfVectorizer(stop_words="english")
-    X = vectorizer.fit_transform(df["text"])
-    y = df["label_num"]
-    clf = SVC(kernel="linear")
-    clf.fit(X, y)
     input_data = pd.DataFrame([[email]], columns=["text"])
     input_data = vectorizer.transform(input_data["text"])
     predicted_class = clf.predict(input_data)
