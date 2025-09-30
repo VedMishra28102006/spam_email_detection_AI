@@ -18,7 +18,7 @@ def index():
   context = {}
   if request.method == "POST":
     email = request.form["email"]
-    types = ["ham", "spam"]
+    types = ["not spam", "spam"]
     input_data = pd.DataFrame([[email]], columns=["text"])
     input_data = vectorizer.transform(input_data["text"])
     predicted_class = clf.predict(input_data)
