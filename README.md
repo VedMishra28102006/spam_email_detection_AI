@@ -1,6 +1,6 @@
 1) Description
 
-A spam email detection app which takes a feature as user input and predicts the email class based on the training dataset.
+A spam email detection app which takes a feature as user input and predicts whether the email is spam or not based on the training dataset.
 
 2) How to run
 
