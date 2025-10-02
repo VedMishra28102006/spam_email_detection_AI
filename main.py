@@ -1,15 +1,8 @@
 import os
 from flask import Flask, request, render_template
 import pandas as pd
-from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
-
-df = pd.read_csv("spam_ham_dataset.csv")
-vectorizer = TfidfVectorizer(stop_words="english")
-X = vectorizer.fit_transform(df["text"])
-y = df["label_num"]
-clf = SVC(kernel="linear")
-clf.fit(X, y)
 
 app = Flask(__name__)
 
@@ -26,6 +19,10 @@ def index():
   return render_template("index.html", context=context)
 
 if __name__ == "__main__":
-  host = os.getenv("IP", "0.0.0.0")
-  port = int(os.getenv("PORT", 5000))
-  app.run(host=host, port=port)
+  df = pd.read_csv("spam_ham_dataset.csv")
+  vectorizer = TfidfVectorizer(stop_words="english")
+  X = vectorizer.fit_transform(df["text"])
+  y = df["label_num"]
+  clf = LogisticRegression()
+  clf.fit(X, y)
+  app.run()
